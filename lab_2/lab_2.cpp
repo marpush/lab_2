@@ -8,10 +8,9 @@ int main()
 {
 	const double border_x= 1;
 	const double x = scan_x_in_range(border_x);
-    double sum = 0, sign = 1;
+    double sum = 0, sign = -1;
     for (int index = 0; index < BORDER; index ++){
-        sum = sign * (index + 1) * pow(x, index);
-        sign = -sign;
+        sum = sum + pow(sign, index) * (index + 1) * pow(x, index);
     }
     cout << "The value of the series at x = " << x << " is equal to " << sum;
 
